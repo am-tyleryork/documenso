@@ -152,16 +152,20 @@ export const seedDatabase = async () => {
     createdUsers.push(testUser);
   }
 
-  const team1 = await prisma.team.create({
-    data: {
+  const team1 = await prisma.team.upsert({
+    where: { url: 'team1' },
+    update: {},
+    create: {
       name: 'Team 1',
       url: 'team1',
       ownerUserId: createdUsers[0].id,
     },
   });
 
-  const team2 = await prisma.team.create({
-    data: {
+  const team2 = await prisma.team.upsert({
+    where: { url: 'team2' },
+    update: {},
+    create: {
       name: 'Team 2',
       url: 'team2',
       ownerUserId: createdUsers[1].id,
@@ -182,6 +186,7 @@ export const seedDatabase = async () => {
           role: TeamMemberRole.MEMBER,
         },
       ],
+      skipDuplicates: true,
     });
   }
 };

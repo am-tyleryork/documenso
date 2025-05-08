@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+console.log('NEXT_PRIVATE_DATABASE_URL:', process.env.NEXT_PRIVATE_DATABASE_URL);
+
 const seedDatabase = async () => {
   const files = fs.readdirSync(path.join(__dirname, './seed'));
 

@@ -33,7 +33,9 @@
     "make:version": "npm version --workspace @documenso/remix --include-workspace-root --no-git-tag-version -m \"v%s\"",
     "translate": "npm run translate:extract && npm run translate:compile",
     "translate:extract": "lingui extract --clean",
-    "translate:compile": "lingui compile"
+    "translate:compile": "lingui compile",
+    "extract": "lingui extract",
+    "compile": "lingui compile"
   },
   "packageManager": "npm@10.7.0",
   "engines": {

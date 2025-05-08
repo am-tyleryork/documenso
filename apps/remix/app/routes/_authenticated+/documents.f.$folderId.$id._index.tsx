@@ -141,7 +141,7 @@ export default function DocumentPage() {
 
       <Link
         to={folderId ? `${documentRootPath}/f/${folderId}` : documentRootPath}
-        className="flex items-center text-[#7AC455] hover:opacity-80"
+        className="text-primary flex items-center hover:opacity-80"
       >
         <ChevronLeft className="mr-2 inline-block h-5 w-5" />
         <Trans>Documents</Trans>

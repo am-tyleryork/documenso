@@ -68,6 +68,15 @@ export const RECIPIENT_COLOR_STYLES = {
       'ring-2 ring-recipient-pink hover:bg-recipient-pink/15 active:bg-recipient-pink/15 shadow-[0_0_0_5px_hsl(var(--recipient-pink)/10%),0_0_0_2px_hsl(var(--recipient-pink)/60%),0_0_0_0.5px_hsl(var(--recipient-pink',
     comboxBoxItem: 'hover:bg-recipient-pink/15 active:bg-recipient-pink/15',
   },
+
+  primary: {
+    base: 'ring-primary hover:bg-primary/30',
+    fieldItem: 'group/field-item rounded-[2px]',
+    fieldItemInitials: 'group-hover/field-item:bg-primary',
+    comboxBoxTrigger:
+      'ring-2 ring-primary hover:bg-primary/15 active:bg-primary/15 shadow-[0_0_0_5px_hsl(var(--primary)/10%),0_0_0_2px_hsl(var(--primary)/60%),0_0_0_0.5px_hsl(var(--primary))]',
+    comboxBoxItem: 'hover:bg-primary/15 active:bg-primary/15',
+  },
 } satisfies Record<string, RecipientColorStyles>;
 
 export type CombinedStylesKey = keyof typeof RECIPIENT_COLOR_STYLES;

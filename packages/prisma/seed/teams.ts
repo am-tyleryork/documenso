@@ -36,8 +36,10 @@ export const seedTeam = async ({
     }),
   );
 
-  const team = await prisma.team.create({
-    data: {
+  const team = await prisma.team.upsert({
+    where: { url: teamUrl },
+    update: {},
+    create: {
       name: teamUrl,
       url: teamUrl,
       ownerUserId: teamOwner.id,
